@@ -1,0 +1,65 @@
+{
+    "name": "caydeesoft/saas-kit",
+    "description": "A reusable Laravel SaaS infrastructure engine with multi-tenancy, billing, payments, RBAC, invoices, webhooks, audit logs, MCP tools, and SEO metadata utilities.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "saas",
+        "multi-tenant",
+        "billing",
+        "subscriptions",
+        "rbac",
+        "payments",
+        "stripe",
+        "invoices",
+        "webhooks",
+        "audit",
+        "mcp",
+        "model-context-protocol",
+        "seo",
+        "open-graph",
+        "json-ld"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Caydeesoft\\SaasKit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Caydeesoft\\SaasKit\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/auth": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/contracts": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/database": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/events": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/hashing": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/routing": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "suggest": {
+        "stripe/stripe-php": "Required when using the built-in Stripe payment gateway adapter.",
+        "dompdf/dompdf": "Optional replacement renderer for richer invoice PDFs."
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Caydeesoft\\SaasKit\\SaasKitServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
